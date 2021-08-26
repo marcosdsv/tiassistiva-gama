@@ -32,3 +32,24 @@ telefone = telefone + '-';
 document.forms[0].telefone.value = telefone;
 }
 }
+
+function eventoCelular(event){
+	//código dos digitos de 0 a 9 48 57.
+var cod = event.which || event.keycode;
+var celular = document.getElementById("celular").value;
+if(cod >= 65 && cod <= 90 || cod >= 97 && cod <= 122){
+	event.preventDefault();
+}
+if(celular.length == 0 && cod >= 48 && cod <= 57){
+celular = celular + '(';
+document.forms[0].celular.value = celular;
+}
+if(celular.length == 3){
+celular = celular + ')';
+document.forms[0].celular.value = celular;
+}
+if(celular.length == 9){
+celular = celular + '-';
+document.forms[0].celular.value = celular;
+}
+}
