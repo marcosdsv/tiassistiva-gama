@@ -19,9 +19,15 @@
             <label for="celular">Celular</label><br>
             <input type="tel" name="celular" id="celular" required maxlength="14" placeholder="digite seu número de celular" onkeydown="eventoCelular(event)"><br>
             <label for="cpf">CPF</label><br>
-            <input type="text" name="cpf" id="cpf" required placeholder="digite seu cpf válido"><br>
+            <input type="text" name="cpf" id="cpf" maxlength="14" required placeholder="digite seu cpf válido" onkeydown="eventoCpf(event)"><br>
             <label for="rg">RG</label><br>
             <input type="text" name="rg" id="rg" required placeholder="digite seu rg válido"><br>
+			<label for="sexo">Sexo</label><br>
+			<select name="sexo" id="sexo" required>
+			<option value=""></option>
+			<option value="Masculino">Masculino</option>
+			<option value="Feminino">Feminino</option>
+			</select>
             <input type="button" value="Próximo" onclick="proximo1()">
         </div>
         <div id="div2" style="display: none">
