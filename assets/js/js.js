@@ -5,7 +5,7 @@ function eventoCod(event){
 		if(cod >= 48 && cod <= 57){
 			event.preventDefault();
 	}
-	if(nome.length <= 6){
+	if(nome.length <= 5){
 		document.getElementById("divnome").innerHTML = "Digite seu nome completo";
 	}else{
 		document.getElementById("divnome").innerHTML = "";
@@ -51,5 +51,26 @@ document.forms[0].celular.value = celular;
 if(celular.length == 9){
 celular = celular + '-';
 document.forms[0].celular.value = celular;
+}
+}
+
+function eventoCpf(event){
+	//código dos digitos de 0 a 9 48 57.
+var cod = event.which || event.keycode;
+var cpf = document.getElementById("cpf").value;
+if(cod >= 65 && cod <= 90 || cod >= 97 && cod <= 122){
+	event.preventDefault();
+}
+if(cpf.length == 3 && cod >= 48 && cod <= 57){
+cpf = cpf + '.';
+document.forms[0].cpf.value = cpf;
+}
+if(cpf.length == 7){
+cpf = cpf + '.';
+document.forms[0].cpf.value = cpf;
+}
+if(cpf.length == 11){
+cpf = cpf + '-';
+document.forms[0].cpf.value = cpf;
 }
 }
