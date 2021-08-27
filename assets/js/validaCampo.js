@@ -42,3 +42,31 @@ else if(sexo == ""){
 }
 
 }
+
+function proximo2(){
+	var cep = document.getElementById("cep").value;
+	var endereco = document.getElementById("endereco").value;
+	var bairro = document.getElementById("bairro").value;
+	var numero = document.getElementById("numero").value;
+	if(cep == ""){
+		document.getElementById("cep").focus();
+	}
+	else if(endereco == ""){
+		document.getElementById("endereco").focus();
+	}
+	else if(bairro == ""){
+		document.getElementById("bairro").focus();
+	}
+	else if(cidade == ""){
+		document.getElementById("cidade").focus();
+	}
+	else if(estado == ""){
+		document.getElementById("estado").focus();
+	}
+	else if(numero == ""){
+		document.getElementById("numero").focus();
+	}else{
+		document.getElementById("div2").style.display = 'none';
+		document.getElementById("div3").style.display = 'block';
+	}
+}
