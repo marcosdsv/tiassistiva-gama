@@ -68,5 +68,39 @@ function proximo2(){
 	}else{
 		document.getElementById("div2").style.display = 'none';
 		document.getElementById("div3").style.display = 'block';
+		document.getElementById("email").focus();
 	}
+}
+function proximo3(){
+	var email = document.getElementById("email").value;
+	var senha1 = document.getElementById("senha1").value;
+	var senha2 = document.getElementById("senha2").value;
+	if(email == ""){
+		document.getElementById("email").focus();
+	}
+	else if(senha1 == ""){
+		alert("O campo senha está em branco");
+		document.getElementById("senha1").focus();
+	}
+	else if(senha2 == ""){
+		alert("O campo senha está em branco");
+		document.getElementById("senha2").focus();
+	}
+	else if(senha1 != senha2){
+		alert("as senhas não confere! Digite novamente");
+		document.getElementById("senha1").focus();
+	}
+	else if(senha1.length < 8){
+		alert("a senha deve ter mais que 8 caracteres");
+		document.getElementById("senha1").focus();
+	}
+	else if(senha2.length < 8){
+		alert("a senha deve ter mais que 8 caracteres");
+		document.getElementById("senha2").focus();
+	}else{
+		if(confirm("tem certeza que deseja se cadastrar?")){
+	window.location="cadastrado.html";
+		}
+	}
+
 }
