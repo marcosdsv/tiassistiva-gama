@@ -49,14 +49,38 @@
             <input type="text" name="complemento" id="complemento" placeholder="digite seu complemento"><br>
 			<input type="button" value="Próximo" onclick="proximo2()">
         </div>
-        <div id="div3" style="display: none">	
+		<div id="div3" style="display: none">
+<fieldset>
+<legend>Deficiência</legend>
+<input type="radio" id="visual" name="deficiencia">
+<label for="visual">Deficiência Visual</label><br>
+<input type="radio" id="surdo" name="deficiencia">
+<label for="surdo">Deficiência Auditiva</label><br>
+<input type="radio" id="fisica" name="deficiencia">
+<label for="fisica">Deficiência Física</label><br>
+<input type="radio" id="intelectual" name="deficiencia">
+<label for="intelectual">Deficiência Intelectual</label><br>
+</fieldset>
+<br>
+<fieldset>
+<legend>Cursos</legend>
+<input type="checkbox" id="php" name="php">
+<label for="php">PHP</label><br>
+<input type="checkbox" id="java" name="java">
+<label for="java">Java</label><br>
+<input type="checkbox" id="python" name="python">
+<label for="python">Python</label><br>
+</fieldset>
+<input type="button" value="Próximo" onclick="proximo3()">
+</div>
+        <div id="div4" style="display: none">		
             <label for="email">E-mail</label><br>
             <input type="email" name="email" id="email" required placeholder="digite seu e-mail"><br>
             <label for="senha1">Senha</label><br>
             <input type="password" name="senha1" id="senha1" required placeholder="digite sua senha"><br>
             <label for="senha2">Senha</label><br>
             <input type="password" name="senha2" id="senha2" required placeholder="repita a senha"><br>
-            <input type="button" value="Cadastrar" id="bt" onclick="proximo3()">
+            <input type="button" value="Cadastrar" id="bt" onclick="proximo4()">
     </div>
             </form>
     </body>

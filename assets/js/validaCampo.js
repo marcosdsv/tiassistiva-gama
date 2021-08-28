@@ -68,10 +68,31 @@ function proximo2(){
 	}else{
 		document.getElementById("div2").style.display = 'none';
 		document.getElementById("div3").style.display = 'block';
-		document.getElementById("email").focus();
+		document.getElementById("visual").focus();
 	}
 }
 function proximo3(){
+var visual = document.getElementById("visual").checked;
+var surdo = document.getElementById("surdo").checked;
+var fisica = document.getElementById("fisica").checked;
+var intelectual = document.getElementById("intelectual").checked;
+var php = document.getElementById("php").checked;
+var java = document.getElementById("java").checked;
+var python = document.getElementById("python").checked;
+if(visual != true && surdo != true && fisica != true &&intelectual != true){
+alert("Pelo menos deve selecionar uma deficiência!");
+document.getElementById("visual").focus();
+}
+else if(php != true && java != true && python != true){
+alert("Selecione pelo menos um curso!");
+document.getElementById("php").focus();
+}else{
+	document.getElementById("div4").style.display = 'block';
+	document.getElementById("div3").style.display = 'none';
+	document.getElementById("email").focus();
+}
+}
+function proximo4(){
 	var email = document.getElementById("email").value;
 	var senha1 = document.getElementById("senha1").value;
 	var senha2 = document.getElementById("senha2").value;
@@ -91,11 +112,11 @@ function proximo3(){
 		document.getElementById("senha1").focus();
 	}
 	else if(senha1.length < 8){
-		alert("a senha deve ter mais que 8 caracteres");
+		alert("a senha deve ter pelo menos 8 caracteres");
 		document.getElementById("senha1").focus();
 	}
 	else if(senha2.length < 8){
-		alert("a senha deve ter mais que 8 caracteres");
+		alert("a senha deve ter pelo menos 8 caracteres");
 		document.getElementById("senha2").focus();
 	}else{
 		if(confirm("tem certeza que deseja se cadastrar?")){
