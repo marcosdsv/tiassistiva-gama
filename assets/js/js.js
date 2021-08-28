@@ -74,3 +74,11 @@ cpf = cpf + '-';
 document.forms[0].cpf.value = cpf;
 }
 }
+
+function eventoRg(event){
+	//código dos digitos de 0 a 9 48 57.
+var cod = event.which || event.keycode;
+if(cod >= 65 && cod <= 90 || cod >= 97 && cod <= 122){
+	event.preventDefault();
+}
+}
