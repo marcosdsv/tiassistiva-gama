@@ -10,21 +10,27 @@
 <script src="assets/js/buscaCep.js"></script>
     </head>
     <body>
+	<header>
+			<p><img src="assets/img/logo.jpg">Seja bem-vindo a tiassistiva – Gama, cadastre-se nos cursos ofertados em nossa plataforma e conheça o melhor da informática.</p>
+	</header>
+	<main>
         <form>
             <div id="div1" style="display: block">
-            <label for="nome">Nome</label><br>
-            <input type="text" name="nome" id="nome" required placeholder="digite seu nome completo" 	onkeypress="eventoCod(event)"><br>
-            <p id="divnome"></p>
-            <label for="telefone">Telefone</label><br>
-            <input type="tel" name="telefone" id="telefone" required maxlength="13" placeholder="digite seu número de telefone fixo" onkeypress="eventoTelefone(event)"><br>
-			<p id="divTel"></p>
-            <label for="celular">Celular</label><br>
-            <input type="tel" name="celular" id="celular" required maxlength="14" placeholder="digite seu número de celular" onkeypress="eventoCelular(event)"><br>
-            <label for="cpf">CPF</label><br>
-            <input type="text" name="cpf" id="cpf" maxlength="14" required placeholder="digite seu cpf válido" onkeypress="eventoCpf(event)"><br>
-            <label for="rg">RG</label><br>
-            <input type="text" name="rg" id="rg" required placeholder="digite seu rg válido" onkeypress="eventoRg(event)"><br>
-			<label for="sexo">Sexo</label><br>
+			<h2>Dados Pessoais</h2>
+			<p>Todos os campos com * são obrigatórios</p>
+            <label for="nome">Nome *</label><br>
+            <input type="text" name="nome" id="nome" required placeholder="Digite seu nome completo" 	onkeypress="eventoCod(event)"><br>
+            <p id="pnome"></p>
+            <label for="telefone">Telefone *</label><br>
+            <input type="tel" name="telefone" id="telefone" required maxlength="13" placeholder="Digite seu número de telefone fixo" onkeypress="eventoTelefone(event)"><br>
+			<p id="ptelefone"></p>
+            <label for="celular">Celular *</label><br>
+            <input type="tel" name="celular" id="celular" required maxlength="14" placeholder="Digite seu número de celular" onkeypress="eventoCelular(event)"><br>
+            <label for="cpf">CPF *</label><br>
+            <input type="text" name="cpf" id="cpf" maxlength="14" required placeholder="Digite seu CPF válido" onkeypress="eventoCpf(event)"><br>
+            <label for="rg">RG *</label><br>
+            <input type="text" name="rg" id="rg" required placeholder="Digite seu RG válido" onkeypress="eventoRg(event)"><br>
+			<label for="sexo">Sexo *</label><br>
 			<select name="sexo" id="sexo" required>
 			<option selected value=""></option>
 			<option value="Masculino">Masculino</option>
@@ -33,55 +39,65 @@
             <input type="button" value="Próximo" onclick="proximo1()">
         </div>
         <div id="div2" style="display: none">
-            <label for="cep">CEP</label><br>
-            <input type="text" name="cep" id="cep" required placeholder="digite seu CEP" onblur="pesquisacep(this.value);"><br>
-            <label for="endereco">Endereço</label><br>
-            <input type="text" name="endereco" id="endereco" required placeholder="digite seu endereço"><br>
-            <label for="bairro">Bairro</label><br>
-            <input type="text" name="bairro" id="bairro" required placeholder="digite seu bairro"><br>
-            <label for="cidade">Cidade</label><br>
+		<h2>Endereço</h2>
+		<p>Todos os campos com * são obrigatórios</p>
+            <label for="cep">CEP *</label><br>
+            <input type="text" name="cep" id="cep" required placeholder="Digite seu CEP" onblur="pesquisacep(this.value);"><br>
+            <label for="endereco">Endereço *</label><br>
+            <input type="text" name="endereco" id="endereco" required placeholder="Digite seu endereço"><br>
+            <label for="bairro">Bairro *</label><br>
+            <input type="text" name="bairro" id="bairro" required placeholder="Digite seu bairro"><br>
+            <label for="cidade">Cidade *</label><br>
             <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade"><br>
-            <label for="estado">Estado</label><br>
+            <label for="estado">Estado *</label><br>
             <input type="text" name="estado" id="estado" placeholder="Digite seu estado"><br>
-            <label for="numero">Número</label><br>
-            <input type="text" name="numero" id="numero" required placeholder="digite o número"><br>
+            <label for="numero">Número *</label><br>
+            <input type="text" name="numero" id="numero" required placeholder="Digite o número"><br>
             <label for="complemento">Complemento</label><br>
-            <input type="text" name="complemento" id="complemento" placeholder="digite seu complemento"><br>
+            <input type="text" name="complemento" id="complemento" placeholder="Digite seu complemento"><br>
 			<input type="button" value="Próximo" onclick="proximo2()">
         </div>
 		<div id="div3" style="display: none">
+		<h2>Deficiência / Curso</h2>
+		<p>Todos os campos com * são obrigatórios</p>
 <fieldset>
-<legend>Deficiência</legend>
-<input type="radio" id="visual" name="deficiencia">
+<legend>Deficiência *</legend>
+<input type="radio" id="visual" name="deficiencia" required>
 <label for="visual">Deficiência Visual</label><br>
-<input type="radio" id="surdo" name="deficiencia">
+<input type="radio" id="surdo" name="deficiencia" required>
 <label for="surdo">Deficiência Auditiva</label><br>
-<input type="radio" id="fisica" name="deficiencia">
+<input type="radio" id="fisica" name="deficiencia" required>
 <label for="fisica">Deficiência Física</label><br>
-<input type="radio" id="intelectual" name="deficiencia">
+<input type="radio" id="intelectual" name="deficiencia" required>
 <label for="intelectual">Deficiência Intelectual</label><br>
 </fieldset>
 <br>
 <fieldset>
-<legend>Cursos</legend>
-<input type="checkbox" id="php" name="php">
+<legend>Cursos *</legend>
+<input type="checkbox" id="php" name="php" required>
 <label for="php">PHP</label><br>
-<input type="checkbox" id="java" name="java">
+<input type="checkbox" id="java" name="java" required>
 <label for="java">Java</label><br>
-<input type="checkbox" id="python" name="python">
+<input type="checkbox" id="python" name="python" required>
 <label for="python">Python</label><br>
 </fieldset>
 <input type="button" value="Próximo" onclick="proximo3()">
 </div>
         <div id="div4" style="display: none">		
-            <label for="email">E-mail</label><br>
-            <input type="email" name="email" id="email" required placeholder="digite seu e-mail"><br>
-            <label for="senha1">Senha</label><br>
-            <input type="password" name="senha1" id="senha1" required placeholder="digite sua senha"><br>
-            <label for="senha2">Senha</label><br>
-            <input type="password" name="senha2" id="senha2" required placeholder="repita a senha"><br>
+		<h2>Dados de acesso</h2>
+		<p>Todos os campos com * são obrigatórios</p>
+            <label for="email">E-mail *</label><br>
+            <input type="email" name="email" id="email" required placeholder="Digite seu e-mail"><br>
+            <label for="senha1">Senha *</label><br>
+            <input type="password" name="senha1" id="senha1" required placeholder="Digite sua senha"><br>
+            <label for="senha2">Senha *</label><br>
+            <input type="password" name="senha2" id="senha2" required placeholder="Repita a senha"><br>
             <input type="button" value="Cadastrar" id="bt" onclick="proximo4()">
     </div>
             </form>
+			</main>
+			<footer>
+			&copy; TI Assistiva-Gama.
+			</footer>
     </body>
 </html>
