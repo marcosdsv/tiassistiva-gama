@@ -23,26 +23,32 @@ var resultadoCpf2 = cpf.substring(7, 8);
 var resultadoCpf3 = cpf.substring(11, 12);
 //Verifica se o campo nome atende todos os argumentos.
 if(nome.length <= 5){
+	alert("Digite seu nome completo");
 	document.getElementById("nome").focus();
 }
 //Verifica se o campo telefone atende todos os argumentos.
 else if(!(!(!(resultadoTelefone1 == "(") && resultadoTelefone2 == ")") && resultadoTelefone3 == "-") || telefone.length <= 12){
+	alert("Digite somente números");
     document.getElementById("telefone").focus();
 }
 //Verifica se o campo celular atende todos os argumentos.
 else if(!(!(!(resultadoCelular1 == "(") && resultadoCelular2 == ")") && resultadoCelular3 == "-") || celular.length <= 13){
+	alert("Digite somente números");
     document.getElementById("celular").focus();
 }
 //Verifica se o campo CPF atende todos os argumentos.
 else if(!(!(!(resultadoCpf1 == ".") && resultadoCpf2 == ".") && resultadoCpf3 == "-") || cpf.length <= 13){
+	alert("Digite seu CPF completo, não precisa de digitar pontos e nem hífen");
     document.getElementById("cpf").focus();
 }
 //Verifica se está em branco.
 else if(rg == ""){
+	alert("Digite seu RG");
 	document.getElementById("rg").focus();
 }
 //Verifica se o campo sexo está em branco.
 else if(sexo == ""){
+	alert("Escolha seu sexo");
 	document.getElementById("sexo").focus();
 }else{
 	//Oculta a div1 e mostra a div2.
@@ -61,26 +67,32 @@ function proximo2(){
 	var numero = document.getElementById("numero").value;
 	//Verifica se o campo CEP está em branco.
 	if(cep == ""){
+		alert("Digite seu CEP");
 		document.getElementById("cep").focus();
 	}
 	//Verifica se o campo endereço está em branco.
 	else if(endereco == ""){
+		alert("Digite seu endereço");
 		document.getElementById("endereco").focus();
 	}
 	//Verifica se o campo Bairro está em branco.
 	else if(bairro == ""){
+		alert("Digite seu bairro");
 		document.getElementById("bairro").focus();
 	}
 	//Verifica se o campo cidade está em branco.
 	else if(cidade == ""){
+		alert("Digite sua cidade");
 		document.getElementById("cidade").focus();
 	}
 	//Verifica se o campo estado está em branco.
 	else if(estado == ""){
+		alert("Digite seu estado");
 		document.getElementById("estado").focus();
 	}
 	//Verifica se o campo número está em branco.
 	else if(numero == ""){
+		alert("Digite seu número");
 		document.getElementById("numero").focus();
 	}else{
 		////Oculta a div2 e mostra a div3.
@@ -123,35 +135,36 @@ function proximo4(){
 	var senha2 = document.getElementById("senha2").value;
 	//Verifica se o campo e-mail está em branco.
 	if(email == ""){
+		alert("Digite seu e-mail");
 		document.getElementById("email").focus();
 	}
 	//Verifica se o primeiro input de senha está em branco.
 	else if(senha1 == ""){
-		alert("O campo senha está em branco");
+		alert("Digite sua senha");
 		document.getElementById("senha1").focus();
 	}
 	//Verifica se o segundo input de senha está em branco.
 	else if(senha2 == ""){
-		alert("O campo senha está em branco");
+		alert("Digite sua senha");
 		document.getElementById("senha2").focus();
 	}
 	//Verifica se a primeira senha é diferente da segunda.
 	else if(senha1 != senha2){
-		alert("as senhas não confere! Digite novamente");
+		alert("As senhas não confere! Digite novamente");
 		document.getElementById("senha1").focus();
 	}
 	//Verifica se a primeira senha é menor que 8.
 	else if(senha1.length < 8){
-		alert("a senha deve ter pelo menos 8 caracteres");
+		alert("A senha deve ter pelo menos 8 caracteres");
 		document.getElementById("senha1").focus();
 	}
 	//Verifica se a segunda senha é menor que 8.
 	else if(senha2.length < 8){
-		alert("a senha deve ter pelo menos 8 caracteres");
+		alert("A senha deve ter pelo menos 8 caracteres");
 		document.getElementById("senha2").focus();
 	}else{
 		//mostra um alert com dois botões.
-		if(confirm("tem certeza que deseja se cadastrar?")){
+		if(confirm("Tem certeza que deseja se cadastrar?")){
 	window.location="cadastrado.html";
 		}
 	}
