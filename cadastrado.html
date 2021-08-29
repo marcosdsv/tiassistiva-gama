@@ -3,11 +3,13 @@
 <title>Cadastrado com sucesso!!</title>
 <script>
 setTimeout(function(){
- window.location="index.html";
+ document.getElementById("p1").style.display = 'none';
+ document.getElementById("p2").style.display = 'block';
  }, 2000);
 </script>
 </head>
 <body>
-<p>redireicionando.. aguarde...</p>
+<p id="p1" style="display: block">E-mail de acesso sendo enviado... Aguarde...</p>
+<p id="p2" style="display: none">E-mail de confirmação foi enviado com sucesso!! Verifique sua caixa de entrada ou spam!!</p>
 </body>
 </html>
